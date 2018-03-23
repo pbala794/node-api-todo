@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f3f3;
+    font-family: 'Indie Flower', cursive;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin: 20px 10px 0;
+}
+
+header span {
+    color: tomato;
+}
+
+.task-container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 750px;
+    height: 500px;
+}
+
+.new-task-box {
+    position: relative;
+}
+
+.new-task-box label {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    pointer-events: none;
+    transition: all .3s ease-out;
+}
+
+.new-task-box input:focus ~ label, 
+.new-task-box input:valid ~ label {
+    bottom: 50px;
+    color: #3f3f3f;
+}
+
+.task-container input {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 50px;
+    border: none;
+    border-bottom: 2px solid #333;
+    background: transparent;
+    font-size: 18px;
+}
+
+.task-container input:required {
+    box-shadow:none;
+}
+
+.todo-list {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.todo-list li {
+    padding: 15px;
+    font-size: 18px;
+    color: green;
+    transition: all .3s ease-in-out; 
+}
+
+.remove-btn {
+    text-align: right;
+    color: darkred;
+    font-size: 2em;
+    float: right;
+    clear: both;
+    line-height: 25px;
+}
+
+.todo-list li:hover {
+    cursor: pointer;
+}
+
+.todo-list li:not(.completed):hover {
+    color: darkgreen;
+    font-size: larger;
+    background: #dddddd;
+}
+
+.todo-list .completed {
+    text-decoration: line-through;
+    color: #333;
+}
+
+/* Media queries */
+
+@media all and (max-width: 476px) {
+    header h1 {
+        line-height: 50px;
+    }
+}
